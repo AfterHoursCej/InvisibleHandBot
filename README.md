@@ -11,6 +11,37 @@ Although, if you are interested and want to invite this bot to your server, DM m
 
 ## Changelog
 
+### 0.2.0
+
+* Major reworks to code
+	* Switched to JDA API (from Javacord)
+	* Now uses JDA-Utilities to do commands instead of custom command classes
+* Added Command(s)
+	* Voice Commands
+		* Join
+			* Joins the channel the user is currently in if not already in a channel
+		* Play {YouTube/SoundCloud/Bandcamp/Vimeo/Twitch link}
+			* Joins the channel the user is currently in if not already in a channel
+			* Plays the specified song
+		* Leave
+			* Leaves the voice channel if in one
+		* Queue
+			* Says the current playing song
+		* Skip
+			* Skips the current playing song
+* Changed Command(s)
+	* Define {Word}
+		* Now Waifu Define {word}
+	* ResetWaifu {User}
+		* Now Waifu Reset {User}
+* Removed Command(s)
+	* Changing server prefix is now not a settings option
+* Added Feature(s)
+	* Achievements
+		* Unlockable achievements are now achievable
+		* These achievements are secret but upon unlocking them the user will get DM confimation
+		* These achievements are unlocked through publicly known commands
+
 ### 0.1.5
 
 * Fixed bug(s)
