@@ -39,7 +39,7 @@ Although, if you are interested and want to invite this bot to your server, DM m
 * Added Feature(s)
 	* Achievements
 		* Unlockable achievements are now achievable
-		* These achievements are secret but upon unlocking them the user will get DM confimation
+		* These achievements are secret but upon unlocking them the user will get DM confirmation
 		* These achievements are unlocked through publicly known commands
 
 ### 0.1.5
