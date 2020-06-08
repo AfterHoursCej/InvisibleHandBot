@@ -1,8 +1,6 @@
 package com.nekomata.revolutionbot.commands.music;
 
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.Timer;
 import java.util.TimerTask;
 
 import com.jagrosh.jdautilities.command.Command;
