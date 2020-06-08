@@ -51,6 +51,8 @@ public class LoopCommand extends Command {
         public void run() {
         	long m = info.length;
     		
+        	channel.sendMessage("Playing " + info.title + " after " + m + " milliseconds").complete();
+        	
     		new java.util.Timer().schedule( 
     		        new Replay(manager, channel, info), 
     		        m 
