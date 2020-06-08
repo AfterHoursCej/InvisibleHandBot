@@ -6,7 +6,7 @@ import com.jagrosh.jdautilities.command.CommandEvent;
 public class PongCommand extends Command {
 
 	public PongCommand() {
-		super.name = "ping";
+		super.name = "pong";
 		super.help = "@Lav";
 		super.hidden = true;
 	}

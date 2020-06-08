@@ -32,7 +32,7 @@ public class LoopCommand extends Command {
 		        m 
 		);
 		
-		event.reply("Looping " + info.title);
+		event.reply("Playing " + info.title + " after " + m + " milliseconds");
 	}
 	
 	public class Replay extends TimerTask {
