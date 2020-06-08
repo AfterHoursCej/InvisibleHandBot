@@ -28,7 +28,7 @@ public class LoopCommand extends Command {
 		
 		new java.util.Timer().schedule( 
 				
-		        new Replay(manager, event.getTextChannel()), 
+		        new Replay(manager, event.getTextChannel(), info), 
 		        m 
 		);
 		
@@ -39,22 +39,20 @@ public class LoopCommand extends Command {
 		
 		PlayerManager manager;
 		TextChannel channel;
+		AudioTrackInfo info;
 		
-		public Replay(PlayerManager manager, TextChannel channel) {
+		public Replay(PlayerManager manager, TextChannel channel, AudioTrackInfo info) {
 			this.manager = manager;
 			this.channel = channel;
+			this.info = info;
 		}
 		
 		@Override
         public void run() {
-			AudioTrackInfo info = manager.queuedInfo(channel);
-			
-        	manager.loadAndPlay(channel, info.uri);
-        	
         	long m = info.length;
     		
     		new java.util.Timer().schedule( 
-    		        new Replay(manager, channel), 
+    		        new Replay(manager, channel, info), 
     		        m 
     		);
         }
