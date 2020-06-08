@@ -54,12 +54,11 @@ public class LoopCommand extends Command {
 			this.manager = manager;
 			this.channel = channel;
 			this.info = info;
+			loops.put(channel, this);
 		}
 		
 		@Override
         public void run() {
-			loops.put(channel, this);
-			
 			manager.loadAndPlay(channel, info.uri);
 			
         	long m = info.length;
