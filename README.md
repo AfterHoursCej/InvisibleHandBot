@@ -11,6 +11,14 @@ Although, if you are interested and want to invite this bot to your server, DM m
 
 ## Changelog
 
+### 0.2.1
+
+* Added Command(s)
+	* Loop
+		* Loops current playing song
+	* Volume {Volume}
+		* Chanes music volume
+
 ### 0.2.0
 
 * Major reworks to code
