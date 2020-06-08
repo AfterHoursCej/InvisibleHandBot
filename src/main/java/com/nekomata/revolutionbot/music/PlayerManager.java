@@ -11,6 +11,7 @@ import com.sedmelluq.discord.lavaplayer.source.AudioSourceManagers;
 import com.sedmelluq.discord.lavaplayer.tools.FriendlyException;
 import com.sedmelluq.discord.lavaplayer.track.AudioPlaylist;
 import com.sedmelluq.discord.lavaplayer.track.AudioTrack;
+import com.sedmelluq.discord.lavaplayer.track.AudioTrackInfo;
 
 import net.dv8tion.jda.api.entities.Guild;
 import net.dv8tion.jda.api.entities.TextChannel;
@@ -46,7 +47,6 @@ public class PlayerManager {
 	public void loadAndPlay(TextChannel channel, String trackUrl) {
 		GuildMusicManager musicManager =  getGuildMusicManager(channel.getGuild());
 		
-		
 		playerManager.loadItemOrdered(musicManager, trackUrl, new AudioLoadResultHandler() {
 			
 			@Override
@@ -54,6 +54,8 @@ public class PlayerManager {
 				channel.sendMessage(track.getInfo().title + " added to queue!").queue();
 				
 				play(musicManager, track);
+				
+				
 			}
 			
 			@Override
@@ -86,6 +88,12 @@ public class PlayerManager {
 		GuildMusicManager musicManager = getGuildMusicManager(channel.getGuild());
 		
 		return musicManager.player.getPlayingTrack().getInfo().title;
+	}
+	
+	public AudioTrackInfo queuedInfo(TextChannel channel) {
+		GuildMusicManager musicManager = getGuildMusicManager(channel.getGuild());
+		
+		return musicManager.player.getPlayingTrack().getInfo();
 	}
 	
 	public void stop(TextChannel channel) {
