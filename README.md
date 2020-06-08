@@ -17,7 +17,7 @@ Although, if you are interested and want to invite this bot to your server, DM m
 	* Loop
 		* Loops current playing song
 	* Volume {Volume}
-		* Chanes music volume
+		* Changes music volume
 
 ### 0.2.0
 
