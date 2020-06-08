@@ -16,8 +16,11 @@ Although, if you are interested and want to invite this bot to your server, DM m
 * Added Command(s)
 	* Loop
 		* Loops current playing song
+		* If song already looping, stop loop instead
 	* Volume {Volume}
 		* Changes music volume
+* Fixed bug(s)
+	* Pong not recognized
 
 ### 0.2.0
 
