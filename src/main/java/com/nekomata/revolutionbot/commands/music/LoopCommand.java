@@ -32,7 +32,7 @@ public class LoopCommand extends Command {
 		        m 
 		);
 		
-		event.reply("Playing " + info.title + " after " + m + " milliseconds");
+		event.reply("Looping " + info.title);
 	}
 	
 	public class Replay extends TimerTask {
@@ -49,9 +49,9 @@ public class LoopCommand extends Command {
 		
 		@Override
         public void run() {
+			manager.loadAndPlay(channel, info.uri);
+			
         	long m = info.length;
-    		
-        	channel.sendMessage("Playing " + info.title + " after " + m + " milliseconds").complete();
         	
     		new java.util.Timer().schedule( 
     		        new Replay(manager, channel, info), 
